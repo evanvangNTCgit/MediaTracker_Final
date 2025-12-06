@@ -1,9 +1,9 @@
-﻿<Window x:Class="MediaTracker_Final.MainWindow"
+﻿<Window x:Class="MediaTrackerFinal.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MediaTracker_Final"
+        xmlns:local="clr-namespace:MediaTrackerFinal"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="800" Width="900">

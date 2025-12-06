@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace MediaTracker_Final
+namespace MediaTrackerFinal
 {
     /// <summary>
     /// Interaction logic for App.xaml

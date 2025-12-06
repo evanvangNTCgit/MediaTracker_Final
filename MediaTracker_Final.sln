@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36623.8 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaTracker_Final", "MediaTracker_Final\MediaTracker_Final.csproj", "{817539BB-1980-47B2-9F6A-DD7CBA61F1F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaTrackerFinal", "MediaTracker_Final\MediaTrackerFinal.csproj", "{817539BB-1980-47B2-9F6A-DD7CBA61F1F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
