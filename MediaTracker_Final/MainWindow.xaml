@@ -25,10 +25,10 @@
                 <RowDefinition MinHeight="90" MaxHeight="90"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition MinWidth="350">
+                <ColumnDefinition MinWidth="350" MaxWidth="350">
 
                 </ColumnDefinition>
-                <ColumnDefinition MinWidth="600">
+                <ColumnDefinition MinWidth="600" MaxWidth="1000">
 
                 </ColumnDefinition>
             </Grid.ColumnDefinitions>
