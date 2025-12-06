@@ -1,0 +1,21 @@
+{
+  "Media":
+  [
+    {
+      "PriorityNumber": 1,
+      "Media Name": "Interstellar",
+      "Media Source": "Christopher Nolan",
+      "Media Type": "Video",
+      "Media Consumed": "100",
+      "Media Length": "1000"
+    },
+    {
+      "PriorityNumber": 2,
+      "Media Name": "Cars",
+      "Media Source": "Disney",
+      "Media Type": "Video",
+      "Media Consumed": "500",
+      "Media Length": "4000"
+    }
+  ]
+}

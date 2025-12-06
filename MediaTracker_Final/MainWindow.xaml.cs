@@ -2,6 +2,8 @@
 
 namespace MediaTrackerFinal
 {
+    using System.IO;
+    using System.Text.Json.Nodes;
     using System.Windows;
 
     /// <summary>
@@ -15,6 +17,14 @@ namespace MediaTrackerFinal
         public MainWindow()
         {
             this.InitializeComponent();
+
+            var r = new StreamReader("../../../TestJSON/testMedia.json");
+            var data = r.ReadToEnd();
+
+            var jsonOBJ = JsonObject.Parse(data);
+            var myArray = (JsonArray)jsonOBJ["Media"];
+
+            Console.WriteLine("Hello");
         }
 
         private void HightPriority_Click(object sender, RoutedEventArgs e)
