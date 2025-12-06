@@ -2,9 +2,8 @@
 
 namespace MediaTrackerFinal
 {
-    using System.IO;
-    using System.Text.Json.Nodes;
     using System.Windows;
+    using MediaTrackerFinal.InterfaceHandling;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml.
@@ -18,11 +17,11 @@ namespace MediaTrackerFinal
         {
             this.InitializeComponent();
 
-            var r = new StreamReader("../../../TestJSON/testMedia.json");
-            var data = r.ReadToEnd();
+            var mediaGetter = new UserMediaAccessor();
 
-            var jsonOBJ = JsonObject.Parse(data);
-            var myArray = (JsonArray)jsonOBJ["Media"];
+            var test = mediaGetter.GetMediaArray()[1];
+
+            var testing = new InterfaceHandler(this, this.MediaListBox, this.PriorityText, this.MediaName, this.MediaCreator, this.MediaType, this.MediaSource, this.MediaConsumed);
 
             Console.WriteLine("Hello");
         }
