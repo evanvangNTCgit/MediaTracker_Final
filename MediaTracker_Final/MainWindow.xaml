@@ -6,25 +6,74 @@
         xmlns:local="clr-namespace:MediaTrackerFinal"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="800" Width="900">
+        Title="MainWindow" Height="800" Width="900"
+        MinHeight="800"
+        MinWidth="900"
+        >
     <Grid>
         <Grid>
+            <!--This is for the media display-->
             <Grid.RowDefinitions>
-                <RowDefinition>
+                <RowDefinition MinHeight="90" MaxHeight="90"></RowDefinition>
+                <RowDefinition MaxHeight="300"></RowDefinition>
+                <RowDefinition MaxHeight="100"></RowDefinition>
+                <RowDefinition MaxHeight="50"></RowDefinition>
+                <RowDefinition MaxHeight="50"></RowDefinition>
+                <RowDefinition MaxHeight="50"></RowDefinition>
+                <RowDefinition MaxHeight="50"></RowDefinition>
+                <RowDefinition MaxHeight="50"></RowDefinition>
+                <RowDefinition MinHeight="90" MaxHeight="90"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="350">
+
+                </ColumnDefinition>
+                <ColumnDefinition MinWidth="600">
+
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="MediaImage" Grid.Column="1" HorizontalAlignment="Center" Height="250"  Width="250" Grid.Row="1" VerticalAlignment="Center" Source="/good-will-hunting-1997.webp" Stretch="Fill"/>
+            <TextBlock x:Name="PriorityText" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Priority: #" VerticalAlignment="Center" Height="80" Width="521" FontSize="48"/>
+            <TextBlock x:Name="MediaName" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Good Will Hunting" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
+            <TextBlock x:Name="MediaSource" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" TextWrapping="Wrap" Text="By Matt Damon" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
+            <TextBlock x:Name="MediaType" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="5" TextWrapping="Wrap" Text="Video" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
+            <TextBlock x:Name="MediaSource1" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="6" TextWrapping="Wrap" Text="Netflix" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
+            <TextBlock x:Name="MediaConsumed" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="7" TextWrapping="Wrap" Text="0:25:25 / 1:30:10" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition MaxHeight="90" MinHeight="90">
+                </RowDefinition>
+                <RowDefinition MaxHeight="70">
+
+                </RowDefinition>
+                <RowDefinition MaxHeight="70">
 
                 </RowDefinition>
                 <RowDefinition>
+
+                </RowDefinition>
+                <RowDefinition MaxHeight="90">
 
                 </RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition>
+                <ColumnDefinition MinWidth="350" MaxWidth="350">
 
                 </ColumnDefinition>
                 <ColumnDefinition>
 
                 </ColumnDefinition>
             </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Title" HorizontalAlignment="Center" Margin="10,0,0,0" TextWrapping="Wrap" Text="Evan's Media Tracker" VerticalAlignment="Center" Width="880" Grid.ColumnSpan="2" Height="70" FontSize="36" TextAlignment="Center"/>
+            <ListBox x:Name="MediaListBox" Grid.Row="3" Grid.Column="0" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+            <Button x:Name="AddMediaButton" Content="Add" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="4" Grid.Column="0" VerticalAlignment="Top" Height="30" Width="100" Click="AddMedia_Click"/>
+            <Button x:Name="MostWatchedButton" Content="Most Watched" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Height="30" Width="100" Click="MostWatched_Click"/>
+            <Button x:Name="LeastWatchedButton" Content="Least Watched" HorizontalAlignment="Left" Margin="240,0,0,0" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Height="30" Width="100" Click="LeastWatched_Click"/>
+            <Button x:Name="HighPriorityButton" Content="High Priority" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Height="30" Width="100" Click="HightPriority_Click"/>
+            <Button x:Name="LeastPriorityButton" Content="Least Priority" HorizontalAlignment="Left" Margin="240,0,0,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Height="30" Width="100" Click="LeastPriority_Click"/>
+            <Button x:Name="EditMediaButton" Content="Edit" HorizontalAlignment="Left" Margin="100,10,0,0" Grid.Row="4" Grid.Column="1" VerticalAlignment="Top" Height="30" Width="100" Click="EditMedia_Click"/>
+            <Button x:Name="RemoveMediaButton" Content="Remove" HorizontalAlignment="Left" Margin="420,10,0,0" Grid.Row="4" Grid.Column="1" VerticalAlignment="Top" Height="30" Width="100" Click="RemoveMedia_Click"/>
         </Grid>
     </Grid>
 </Window>

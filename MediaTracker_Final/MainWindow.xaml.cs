@@ -15,19 +15,41 @@ namespace MediaTrackerFinal
         public MainWindow()
         {
             this.InitializeComponent();
-            var test = Multiply(2, 10);
-            MessageBox.Show($"{test}");
         }
 
-        /// <summary>
-        /// Sample Documentation.
-        /// </summary>
-        /// <param name="x">The first value to multiply.</param>
-        /// <param name="y">Second value to multiply.</param>
-        /// <returns>The X and Y values multiplied.</returns>
-        public static int Multiply(int x, int y)
+        private void HightPriority_Click(object sender, RoutedEventArgs e)
         {
-            return x * y;
+
+        }
+
+        private void LeastPriority_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MostWatched_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LeastWatched_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddMedia_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RemoveMedia_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditMedia_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

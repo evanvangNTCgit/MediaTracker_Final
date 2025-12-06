@@ -11,6 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="good-will-hunting-1997.webp" />
+    <None Remove="G_Will_Hunting.jfif" />
     <None Remove="stylecop.json" />
   </ItemGroup>
 
@@ -23,6 +25,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="good-will-hunting-1997.webp" />
+    <Resource Include="G_Will_Hunting.jfif" />
   </ItemGroup>
 
 </Project>
