@@ -2,6 +2,7 @@
 
 namespace MediaTrackerFinal
 {
+    using System.Text.Json.Nodes;
     using System.Windows;
     using MediaTrackerFinal.InterfaceHandling;
 
@@ -19,11 +20,17 @@ namespace MediaTrackerFinal
 
             var mediaGetter = new UserMediaAccessor();
 
-            var test = mediaGetter.GetMediaArray()[1];
+            var windowTextChangHandler = new InterfaceHandler(this, this.MediaListBox, this.PriorityText, this.MediaName, this.MediaCreator, this.MediaType, this.MediaSource, this.MediaConsumed);
 
-            var testing = new InterfaceHandler(this, this.MediaListBox, this.PriorityText, this.MediaName, this.MediaCreator, this.MediaType, this.MediaSource, this.MediaConsumed);
+            var test = mediaGetter.GetMediaArray();
 
-            Console.WriteLine("Hello");
+            foreach (var testItem in test)
+            {
+                var displayText = $"{testItem["Media Name"]} \n  By: {testItem["Media Creator"]}";
+                this.MediaListBox.Items.Add(displayText);
+            }
+
+            Console.WriteLine("hi");
         }
 
         private void HightPriority_Click(object sender, RoutedEventArgs e)

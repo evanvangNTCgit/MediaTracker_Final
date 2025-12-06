@@ -39,4 +39,8 @@
     <Resource Include="good-will-hunting-1997.webp" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="JsonObjectHandling\" />
+  </ItemGroup>
+
 </Project>

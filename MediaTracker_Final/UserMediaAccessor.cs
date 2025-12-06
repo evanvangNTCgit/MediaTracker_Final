@@ -3,6 +3,7 @@ namespace MediaTrackerFinal
 {
     using System.IO;
     using System.Text.Json.Nodes;
+    using static System.Net.Mime.MediaTypeNames;
 
     /// <summary>
     /// This is a class that I plan on implementing singleton.
