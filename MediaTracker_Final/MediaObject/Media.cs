@@ -1,4 +1,6 @@
-﻿namespace MediaTrackerFinal.MediaObject
+﻿// Copyright (c) evanvangNTCgit. All rights reserved.
+
+namespace MediaTrackerFinal.MediaObject
 {
     /// <summary>
     /// This will be my abstract media.
@@ -37,23 +39,46 @@
         /// <param name="source">Source of Media.</param>
         /// <param name="mediaConsumed">Amount of media Consumed.</param>
         /// <param name="mediaLength">Length of the media.</param>
-        public Media(int priorityNumber, string name, string creator, string source, int mediaConsumed, int mediaLength, MediaTypes mediaType)
+        public Media(int priorityNumber, int mediaConsumed, int mediaLength, MediaTypes mediaType, string name = "No name provided", string creator = "No name provided", string source = "No source provided")
         {
             this.PriorityNumber = priorityNumber;
-            this.Name = name;
-            this.Creator = creator;
-            this.Source = source;
-            this.MediaConsumed = mediaConsumed;
-            this.MediaLength = mediaLength;
+            this.name = name;
+            this.creator = creator;
+            this.source = source;
+            this.mediaConsumed = mediaConsumed;
+            this.mediaLength = mediaLength;
             this.mediaType = mediaType;
         }
 
-        public int PriorityNumber { get => priorityNumber; set => priorityNumber = value; }
-        public string Name { get => name; set => name = value; }
-        public string Creator { get => creator; set => creator = value; }
-        public string Source { get => source; set => source = value; }
-        public int MediaConsumed { get => mediaConsumed; set => mediaConsumed = value; }
-        public int MediaLength { get => mediaLength; set => mediaLength = value; }
+        /// <summary>
+        /// Gets the priority number of media.
+        /// </summary>
+        public int PriorityNumber { get => this.priorityNumber; set => this.priorityNumber = value; }
+
+        /// <summary>
+        /// Gets the name of the media.
+        /// </summary>
+        public string Name { get => this.name; }
+
+        /// <summary>
+        /// Gets the creator of the media.
+        /// </summary>
+        public string Creator { get => this.creator; }
+
+        /// <summary>
+        /// Gets the source of the media.
+        /// </summary>
+        public string Source { get => this.source; }
+
+        /// <summary>
+        /// Gets or sets the amount of media consumed by user.
+        /// </summary>
+        public int MediaConsumed { get => this.mediaConsumed; set => this.mediaConsumed = value; }
+
+        /// <summary>
+        /// Gets the length of the media.
+        /// </summary>
+        public int MediaLength { get => this.mediaLength; }
 
         /// <summary>
         /// This is a method that should return how much of the media was consumed.

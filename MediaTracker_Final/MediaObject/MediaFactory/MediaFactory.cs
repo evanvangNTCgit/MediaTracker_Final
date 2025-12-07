@@ -27,13 +27,10 @@ namespace MediaTrackerFinal.MediaObject.MediaFactory
             {
                 case MediaTypes.Movie:
                     throw new NotImplementedException();
-                    break;
                 case MediaTypes.Lecture:
                     throw new NotImplementedException();
-                    break;
                 case MediaTypes.Podcast:
                     throw new NotImplementedException();
-                    break;
                 case MediaTypes.Video:
                     mediaInstantiated = new Video(priorityNumber, name, creator, source, mediaConsumed, mediaLength);
                     break;

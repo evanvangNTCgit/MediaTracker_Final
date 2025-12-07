@@ -2,11 +2,11 @@
 
 namespace MediaTrackerFinal
 {
+    using System.Collections.ObjectModel;
+    using System.Windows;
     using MediaTrackerFinal.InterfaceHandling;
     using MediaTrackerFinal.MediaObject;
     using MediaTrackerFinal.MediaObject.MediaFactory;
-    using System.Collections.ObjectModel;
-    using System.Windows;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml.

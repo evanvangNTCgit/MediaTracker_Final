@@ -17,7 +17,7 @@ namespace MediaTrackerFinal.MediaObject
         /// <param name="mediaConsumed">Amount of Video Consumed.</param>
         /// <param name="mediaLength">Length of the Video.</param>
         public Video(int priorityNumber, string name, string creator, string source, int mediaConsumed, int mediaLength)
-            : base(priorityNumber, name, creator, source, mediaConsumed, mediaLength, MediaTypes.Video)
+            : base(priorityNumber, mediaConsumed, mediaLength, MediaTypes.Video, name, creator, source)
         {
         }
 

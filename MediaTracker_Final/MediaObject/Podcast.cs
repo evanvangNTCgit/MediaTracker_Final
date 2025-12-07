@@ -17,7 +17,7 @@ namespace MediaTrackerFinal.MediaObject
         /// <param name="mediaConsumed">Amount of Podcast Consumed.</param>
         /// <param name="mediaLength">Length of the Podcast.</param>
         public Podcast(int priorityNumber, string name, string creator, string source, int mediaConsumed, int mediaLength)
-            : base(priorityNumber, name, creator, source, mediaConsumed, mediaLength, MediaTypes.Podcast)
+            : base(priorityNumber,mediaConsumed,mediaLength,MediaTypes.Podcast, name, creator, source)
         {
         }
 

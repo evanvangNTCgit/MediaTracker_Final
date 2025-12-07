@@ -36,12 +36,13 @@ namespace MediaTrackerFinal.Singleton
 
                 // Then we find the media field in the object.
                 // This media field holds the array of media user wants to track.
-                this.mediaArray = (JsonArray)mediaObject["Media"] !;
+                this.mediaArray = (JsonArray)this.mediaObject["Media"] !;
             }
             catch
             {
                 throw new NotImplementedException("Find a way to create a JSON object for user");
-                Console.WriteLine("User likely does not have a JSON file.");
+
+                // Console.WriteLine("User likely does not have a JSON file.");
             }
         }
 
@@ -51,7 +52,7 @@ namespace MediaTrackerFinal.Singleton
         /// <returns>JSON media node of user.</returns>
         public JsonNode GetUserMediaNode()
         {
-            return mediaObject;
+            return this.mediaObject;
         }
 
         /// <summary>
@@ -60,7 +61,7 @@ namespace MediaTrackerFinal.Singleton
         /// <returns>Media Array of the user.</returns>
         public JsonArray GetMediaArray()
         {
-            return mediaArray;
+            return this.mediaArray;
         }
     }
 }
