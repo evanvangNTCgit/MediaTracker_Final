@@ -11,7 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="good-will-hunting-1997.webp" />
+    <None Remove="G_Will_Hunting.jfif" />
+    <None Remove="pp_cars_homepage_herobanner_mobile_v5_e05d00f1_a743a7cd.jpeg" />
     <None Remove="stylecop.json" />
   </ItemGroup>
 
@@ -36,11 +37,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="good-will-hunting-1997.webp" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="JsonObjectHandling\" />
+    <Resource Include="G_Will_Hunting.jfif" />
+    <Resource Include="pp_cars_homepage_herobanner_mobile_v5_e05d00f1_a743a7cd.jpeg" />
   </ItemGroup>
 
 </Project>

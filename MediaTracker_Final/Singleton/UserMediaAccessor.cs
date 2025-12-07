@@ -1,5 +1,5 @@
 ﻿// Copyright (c) evanvangNTCgit. All rights reserved.
-namespace MediaTrackerFinal
+namespace MediaTrackerFinal.Singleton
 {
     using System.IO;
     using System.Text.Json.Nodes;
@@ -32,11 +32,11 @@ namespace MediaTrackerFinal
                 var data = r.ReadToEnd();
 
                 // First we get the JSON object of the user.
-                this.mediaObject = JsonObject.Parse(data) !;
+                this.mediaObject = JsonNode.Parse(data) !;
 
                 // Then we find the media field in the object.
                 // This media field holds the array of media user wants to track.
-                this.mediaArray = (JsonArray)this.mediaObject["Media"] !;
+                this.mediaArray = (JsonArray)mediaObject["Media"] !;
             }
             catch
             {
@@ -51,7 +51,7 @@ namespace MediaTrackerFinal
         /// <returns>JSON media node of user.</returns>
         public JsonNode GetUserMediaNode()
         {
-            return this.mediaObject;
+            return mediaObject;
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace MediaTrackerFinal
         /// <returns>Media Array of the user.</returns>
         public JsonArray GetMediaArray()
         {
-            return this.mediaArray;
+            return mediaArray;
         }
     }
 }

@@ -15,7 +15,25 @@
       "Media Name": "Cars",
       "Media Creator": "Disney",
       "Media Type": "Video",
-      "Media Source":  "Disney Plus",
+      "Media Source": "Disney Plus",
+      "Media Consumed": "500",
+      "Media Length": "4000"
+    },
+    {
+      "PriorityNumber": 3,
+      "Media Name": "Wall-E",
+      "Media Creator": "Disney",
+      "Media Type": "Video",
+      "Media Source": "Disney Plus",
+      "Media Consumed": "900",
+      "Media Length": "6000"
+    },
+    {
+      "PriorityNumber": 4,
+      "Media Name": "Toy Story 3",
+      "Media Creator": "Disney",
+      "Media Type": "Video",
+      "Media Source": "Disney Plus",
       "Media Consumed": "500",
       "Media Length": "4000"
     }
