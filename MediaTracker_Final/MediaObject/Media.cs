@@ -81,6 +81,11 @@ namespace MediaTrackerFinal.MediaObject
         public int MediaLength { get => this.mediaLength; }
 
         /// <summary>
+        /// Gets the type of media this is.
+        /// </summary>
+        public MediaTypes MediaType { get => this.mediaType; }
+
+        /// <summary>
         /// This is a method that should return how much of the media was consumed.
         /// </summary>
         /// <returns>Percentage of media consumed.</returns>

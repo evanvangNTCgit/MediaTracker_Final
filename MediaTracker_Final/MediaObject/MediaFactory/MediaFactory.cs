@@ -26,11 +26,14 @@ namespace MediaTrackerFinal.MediaObject.MediaFactory
             switch (mediaType)
             {
                 case MediaTypes.Movie:
-                    throw new NotImplementedException();
+                    mediaInstantiated = new Movie(priorityNumber, name, creator, source, mediaConsumed, mediaLength);
+                    break;
                 case MediaTypes.Lecture:
-                    throw new NotImplementedException();
+                    mediaInstantiated = new Lecture(priorityNumber, name, creator, source, mediaConsumed, mediaLength);
+                    break;
                 case MediaTypes.Podcast:
-                    throw new NotImplementedException();
+                    mediaInstantiated = new Podcast(priorityNumber, name, creator, source, mediaConsumed, mediaLength);
+                    break;
                 case MediaTypes.Video:
                     mediaInstantiated = new Video(priorityNumber, name, creator, source, mediaConsumed, mediaLength);
                     break;

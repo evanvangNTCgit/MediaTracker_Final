@@ -3,21 +3,21 @@
 namespace MediaTrackerFinal.MediaObject
 {
     /// <summary>
-    /// This is a generic video media class.
+    /// This is the lecture media class.
     /// </summary>
-    public class Video : Media
+    public class Lecture : Media
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Video"/> class.
+        /// Initializes a new instance of the <see cref="Lecture"/> class.
         /// </summary>
-        /// <param name="priorityNumber">prioritny number of Video.</param>
-        /// <param name="name">Name of the Video.</param>
-        /// <param name="creator">Creator of the Video.</param>
-        /// <param name="source">Source of Video.</param>
-        /// <param name="mediaConsumed">Amount of Video Consumed.</param>
-        /// <param name="mediaLength">Length of the Video.</param>
-        public Video(int priorityNumber, string name, string creator, string source, int mediaConsumed, int mediaLength)
-            : base(priorityNumber, mediaConsumed, mediaLength, MediaTypes.Video, name, creator, source)
+        /// <param name="priorityNumber">prioritny number of Lecture.</param>
+        /// <param name="name">Name of the Lecture.</param>
+        /// <param name="creator">Creator of the Lecture.</param>
+        /// <param name="source">Source of Lecture.</param>
+        /// <param name="mediaConsumed">Amount of Lecture Consumed.</param>
+        /// <param name="mediaLength">Length of the Lecture.</param>
+        public Lecture(int priorityNumber, string name, string creator, string source, int mediaConsumed, int mediaLength)
+            : base(priorityNumber, mediaConsumed, mediaLength, MediaTypes.Lecture, name, creator, source)
         {
         }
 

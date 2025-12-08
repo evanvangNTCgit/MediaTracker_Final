@@ -17,7 +17,7 @@ namespace MediaTrackerFinal.MediaObject
         /// <param name="mediaConsumed">Amount of Podcast Consumed.</param>
         /// <param name="mediaLength">Length of the Podcast.</param>
         public Podcast(int priorityNumber, string name, string creator, string source, int mediaConsumed, int mediaLength)
-            : base(priorityNumber,mediaConsumed,mediaLength,MediaTypes.Podcast, name, creator, source)
+            : base(priorityNumber, mediaConsumed, mediaLength, MediaTypes.Podcast, name, creator, source)
         {
         }
 
@@ -30,7 +30,9 @@ namespace MediaTrackerFinal.MediaObject
             // So for example a 10,000 second movie.
             // We watched 1,500 seconds of it.
             // We get .15 returned or 15 percent.
-            return (this.MediaConsumed / this.MediaLength) * 100;
+            var dec = (double)this.MediaConsumed / (double)this.MediaLength;
+            var percentageToReturn = Convert.ToInt32(dec * 100);
+            return percentageToReturn;
         }
     }
 }

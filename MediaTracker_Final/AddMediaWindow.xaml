@@ -1,0 +1,92 @@
+﻿<Window x:Class="MediaTrackerFinal.AddMediaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MediaTrackerFinal"
+        mc:Ignorable="d"
+        Title="AddMediaWindow" Height="800" Width="800"
+        MinHeight="800"
+        MinWidth="800"
+        MaxHeight="800"
+        MaxWidth="800"
+        WindowStartupLocation="CenterScreen"
+        >
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="260" MaxWidth="250"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition MaxHeight="75"></RowDefinition>
+                <RowDefinition MinHeight="200"></RowDefinition>
+                <RowDefinition MaxHeight="75"></RowDefinition>
+                <RowDefinition MaxHeight="75"></RowDefinition>
+                <RowDefinition MaxHeight="75"></RowDefinition>
+                <RowDefinition MaxHeight="75"></RowDefinition>
+                <RowDefinition MaxHeight="75"></RowDefinition>
+                <RowDefinition MaxHeight="75"></RowDefinition>
+                <RowDefinition MaxHeight="75"></RowDefinition>
+                <RowDefinition MaxHeight="75"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Add Media" VerticalAlignment="Center" Width="780" Height="55" Grid.Column="1" TextAlignment="Center" FontSize="36"/>
+            <Label x:Name="PriorityLabel" Content="Priority" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="45" Width="247" FontSize="20"/>
+            <Label x:Name="TitleLabel" Content="Title" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Height="45" Width="247" FontSize="20"/>
+            <Label x:Name="ByLabel" Content="By" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="45" Width="247" FontSize="20"/>
+            <Label x:Name="MediaTypeLabel" Content="Media Type" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Height="45" Width="247" FontSize="20"/>
+            <Label x:Name="SourceLabel" Content="Source" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="45" Width="247" FontSize="20"/>
+            <Label x:Name="DurationLabel" Content="Duration" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center" Height="45" Width="247" FontSize="20"/>
+            <Label x:Name="ConsumedLabel" Content="Consumed" HorizontalAlignment="Center" Grid.Row="8" VerticalAlignment="Center" Height="45" Width="247" FontSize="20"/>
+            <Button x:Name="addButton" Grid.Column="1" Content="Add" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Center" Height="40" Width="100" Click="AddButton_Click"/>
+            <ComboBox x:Name="PriorityNumberComboBox" Grid.Column="1" Margin="0,0,140,0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="120" SelectionChanged="PriorityNumberComboBox_SelectionChanged"/>
+            <TextBox x:Name="titleInputBox" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="Interstellar" VerticalAlignment="Center" Width="250" Height="45" />
+            <TextBox x:Name="creatorInputBox" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" Text="Christopher Nolan" VerticalAlignment="Center" Width="250" Height="45" />
+            <ComboBox x:Name="mediaTypeComboBox" Grid.Column="1" Margin="0,0,140,0" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right" Width="120"/>
+            <TextBox x:Name="sourceInputBox" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="6" TextWrapping="Wrap" Text="Netflix" VerticalAlignment="Center" Width="250" Height="45" />
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition MinHeight="600"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition MaxHeight="60"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="260" MaxWidth="260"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="260" MaxWidth="260"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition MinHeight="600"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition MaxHeight="60"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label x:Name="hoursLabel" Grid.Column="1" Content="Hours" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
+            <Label x:Name="minutesLabel" Grid.Column="3" Content="Minutes" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
+            <Label x:Name="SecondsLabel" Grid.Column="5" Content="Seconds" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
+            <ComboBox x:Name="durationHoursComboBox" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="70"/>
+            <ComboBox x:Name="durationMinutesComboBox" Grid.Column="4" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="70"/>
+            <ComboBox x:Name="durationSecondsComboBox" Grid.Column="6" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="70"/>
+            <ComboBox x:Name="consumedHoursComboBox" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="70"/>
+            <ComboBox x:Name="consumedMinutesComboBox" Grid.Column="4" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="70"/>
+            <ComboBox x:Name="consumedSecondsComboBox" Grid.Column="6" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="70"/>
+            <Label x:Name="minutesLabel_Copy" Grid.Column="3" Content="Minutes" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center"/>
+            <Label x:Name="SecondsLabel_Copy" Grid.Column="5" Content="Seconds" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center"/>
+            <Label x:Name="hoursLabel_Copy" Grid.Column="1" Content="Hours" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Window>
