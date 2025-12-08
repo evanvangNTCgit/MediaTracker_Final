@@ -3,12 +3,12 @@
 
 namespace MediaTrackerFinal.Singleton
 {
-    using MediaTrackerFinal.MediaObject;
-    using MediaTrackerFinal.MediaObject.MediaFactory;
     using System;
     using System.Collections.ObjectModel;
     using System.IO;
     using System.Text.Json.Nodes;
+    using MediaTrackerFinal.MediaObject;
+    using MediaTrackerFinal.MediaObject.MediaFactory;
 
     /// <summary>
     /// This is a class that I plan on implementing singleton.

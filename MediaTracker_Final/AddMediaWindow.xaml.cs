@@ -148,6 +148,8 @@ namespace MediaTrackerFinal
                     this.mediaGettingAdded = MediaFactory.CreateMedia(priorityNum, name, creator, MediaTypes.Video, source, consumedLength, durationLength);
                     break;
             }
+
+            this.Close();
         }
 
         private void PriorityNumberComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)

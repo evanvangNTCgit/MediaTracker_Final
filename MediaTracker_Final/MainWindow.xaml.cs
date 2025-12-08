@@ -38,26 +38,6 @@ namespace MediaTrackerFinal
              */
             this.InitializeComponent();
 
-            //var test = MediaFactory.CreateMedia(4, "Wausau", "Evan", MediaTypes.Movie, "Youtube", 100, 1000);
-
-            //this.medias.Add(test);
-
-            //test = MediaFactory.CreateMedia(11, "Toy Story", "Disney", MediaTypes.Video, "Disney Plus", 500, 5550);
-
-            //this.medias.Add(test);
-
-            //test = MediaFactory.CreateMedia(1, "Interstellar", "Christopher Nolan", MediaTypes.Video, "Netflix", 650, 5000);
-
-            //this.medias.Add(test);
-
-            //test = MediaFactory.CreateMedia(5, "Cars", "Disney", MediaTypes.Video, "Disney Plus", 650, 5000);
-
-            //this.medias.Add(test);
-
-            //test = MediaFactory.CreateMedia(10, "Overwatch Gameplay", "EvanGaming", MediaTypes.Video, "Youtube", 11, 1111);
-
-            //this.medias.Add(test);
-
             var userMediaAccesser = new UserMediaAccessor();
             this.medias = userMediaAccesser.Medias;
 
@@ -127,6 +107,11 @@ namespace MediaTrackerFinal
                 windowTextChangeHandler.ChangeMediaType(mediaSelected.MediaType.ToString());
                 windowTextChangeHandler.ChangeMediaConsumed($"{mediaSelected.GetMediaConsumedDisplay().ToString()}% Consumed");
             }
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            WriteToJSON.WriteMediaToJsonFile("../../../TestJSON/testMedia.json", this.medias);
         }
     }
 }

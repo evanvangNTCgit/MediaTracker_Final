@@ -9,6 +9,7 @@
         Title="Evan's Media Tracker" Height="800" Width="900"
         MinHeight="800"
         MinWidth="900"
+        Closed="Window_Closed"
         >
     <Grid>
         <Grid>
@@ -33,12 +34,12 @@
                 </ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Image x:Name="MediaImage" Grid.Column="1" HorizontalAlignment="Center" Height="250"  Width="250" Grid.Row="1" VerticalAlignment="Center" Source="/G_Will_Hunting.jfif" Stretch="Fill"/>
-            <TextBlock x:Name="PriorityText" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Priority: #" VerticalAlignment="Center" Height="80" Width="521" FontSize="48"/>
-            <TextBlock x:Name="MediaName" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Good Will Hunting" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
-            <TextBlock x:Name="MediaCreator" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" TextWrapping="Wrap" Text="By Matt Damon" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
-            <TextBlock x:Name="MediaType" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="5" TextWrapping="Wrap" Text="Video" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
-            <TextBlock x:Name="MediaSource" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="6" TextWrapping="Wrap" Text="Netflix" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
-            <TextBlock x:Name="MediaConsumed" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="7" TextWrapping="Wrap" Text="0:25:25 / 1:30:10" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
+            <TextBlock x:Name="PriorityText" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Priority: # " VerticalAlignment="Center" Height="80" Width="521" FontSize="48"/>
+            <TextBlock x:Name="MediaName" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Title" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
+            <TextBlock x:Name="MediaCreator" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" TextWrapping="Wrap" Text="By " VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
+            <TextBlock x:Name="MediaType" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="5" TextWrapping="Wrap" Text="Media Type" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
+            <TextBlock x:Name="MediaSource" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="6" TextWrapping="Wrap" Text="Source" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
+            <TextBlock x:Name="MediaConsumed" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="7" TextWrapping="Wrap" Text="Consumed%" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
         </Grid>
         <Grid>
             <Grid.RowDefinitions>

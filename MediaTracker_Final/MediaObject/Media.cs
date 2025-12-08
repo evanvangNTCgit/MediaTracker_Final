@@ -97,7 +97,7 @@ namespace MediaTrackerFinal.MediaObject
         /// <returns>Media to string.</returns>
         public override string ToString()
         {
-            return $"{this.name}\n  By: {this.creator}";
+            return $"{this.name}, {this.mediaType.ToString()}\n  By: {this.creator}";
         }
     }
 }
