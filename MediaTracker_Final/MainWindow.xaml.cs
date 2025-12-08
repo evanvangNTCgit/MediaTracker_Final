@@ -31,11 +31,6 @@ namespace MediaTrackerFinal
         /// </summary>
         public MainWindow()
         {
-            /*
-             * TODO
-             * Make the window to edit and add media object.
-             * And the JSON file so user can open and close without their data being lost.
-             */
             this.InitializeComponent();
 
             var userMediaAccesser = new UserMediaAccessor();
@@ -43,7 +38,8 @@ namespace MediaTrackerFinal
 
             this.MediaListBox.ItemsSource = this.medias;
 
-            Console.WriteLine("Hello!");
+            var test = GetTimesFromMedia.HoursMinSecFromMedia(90670);
+            Console.WriteLine("hi");
         }
 
         private void HightPriority_Click(object sender, RoutedEventArgs e)
@@ -89,7 +85,13 @@ namespace MediaTrackerFinal
 
         private void EditMedia_Click(object sender, RoutedEventArgs e)
         {
-            var windowTextChangeHandler = new InterfaceHandler(this, this.MediaListBox, this.PriorityText, this.MediaName, this.MediaCreator, this.MediaType, this.MediaSource, this.MediaConsumed);
+            var editMediaWindow = new EditMediaConsumedWindow((Media)this.MediaListBox.SelectedItem);
+
+            editMediaWindow.ShowDialog();
+
+            this.MediaListBox.Items.Refresh();
+            this.MediaListBox.SelectedIndex += 1;
+            this.MediaListBox.SelectedIndex -= 1;
         }
 
         private void MediaListBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)

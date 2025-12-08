@@ -1,0 +1,44 @@
+﻿<Window x:Class="MediaTrackerFinal.EditMediaConsumedWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MediaTrackerFinal"
+        mc:Ignorable="d"
+        Title="EditMediaConsumedWindow" Height="450" Width="800"
+        MinHeight="450"
+        MinWidth="800"
+        MaxHeight="450"
+        MaxWidth="800"
+        >
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition MaxHeight="75"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition MaxHeight="50"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label x:Name="editingMediaLabelHeader" Grid.Column="3" Content="Editing" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+            <Label x:Name="mediaDurationLabel" Content="Duration" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="20"/>
+            <Label x:Name="consumedLabel" Content="Consumed" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="20"/>
+            <Label x:Name="hoursLabel" Grid.Column="1" Content="Hours" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="20"/>
+            <Label x:Name="minutesLabel" Grid.Column="3" Content="Minutes" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="20"/>
+            <Label x:Name="secondsLabel" Grid.Column="5" Content="Seconds" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="20"/>
+            <ComboBox x:Name="hoursComboBox" Grid.Column="2" HorizontalAlignment="Center" Margin="0,82,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75"/>
+            <ComboBox x:Name="minutesComboBox" Grid.Column="4" HorizontalAlignment="Center" Margin="0,82,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75"/>
+            <ComboBox x:Name="secondsComboBox" Grid.Column="6" HorizontalAlignment="Center" Margin="0,82,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="saveButton" Grid.Column="3" Content="Save" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="20" Click="SaveButton_Click"/>
+        </Grid>
+        <TextBlock x:Name="DurationDisplayText" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="0,159,10,0" HorizontalAlignment="Right" Width="549"/>
+    </Grid>
+</Window>

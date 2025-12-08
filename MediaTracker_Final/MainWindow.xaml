@@ -33,7 +33,7 @@
 
                 </ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Image x:Name="MediaImage" Grid.Column="1" HorizontalAlignment="Center" Height="250"  Width="250" Grid.Row="1" VerticalAlignment="Center" Source="/G_Will_Hunting.jfif" Stretch="Fill"/>
+            <Image x:Name="MediaImage" Grid.Column="1" HorizontalAlignment="Center" Height="250"  Width="250" Grid.Row="1" VerticalAlignment="Center" Source="/Profile_Snip.PNG" Stretch="Fill"/>
             <TextBlock x:Name="PriorityText" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Priority: # " VerticalAlignment="Center" Height="80" Width="521" FontSize="48"/>
             <TextBlock x:Name="MediaName" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Title" VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>
             <TextBlock x:Name="MediaCreator" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" TextWrapping="Wrap" Text="By " VerticalAlignment="Center" Height="31" Width="521" FontSize="20"/>

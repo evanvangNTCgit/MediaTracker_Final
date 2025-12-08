@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <None Remove="G_Will_Hunting.jfif" />
-    <None Remove="pp_cars_homepage_herobanner_mobile_v5_e05d00f1_a743a7cd.jpeg" />
+    <None Remove="Profile_Snip.PNG" />
     <None Remove="stylecop.json" />
   </ItemGroup>
 
@@ -38,7 +38,11 @@
 
   <ItemGroup>
     <Resource Include="G_Will_Hunting.jfif" />
-    <Resource Include="pp_cars_homepage_herobanner_mobile_v5_e05d00f1_a743a7cd.jpeg" />
+    <Resource Include="Profile_Snip.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ImageTesting\" />
   </ItemGroup>
 
 </Project>
