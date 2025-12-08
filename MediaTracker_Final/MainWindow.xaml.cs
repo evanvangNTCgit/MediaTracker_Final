@@ -2,15 +2,19 @@
 
 namespace MediaTrackerFinal
 {
+    using System.Collections.ObjectModel;
+    using System.Diagnostics;
+    using System.IO;
+    using System.Text.Json;
+    using System.Text.Json.Nodes;
+    using System.Text.Json.Serialization;
+    using System.Windows;
     using MediaTrackerFinal.CommandPattern.Commands;
     using MediaTrackerFinal.InterfaceHandling;
     using MediaTrackerFinal.JsonObjectHandling;
     using MediaTrackerFinal.MediaObject;
     using MediaTrackerFinal.MediaObject.MediaFactory;
-    using System.Collections.ObjectModel;
-    using System.Text.Json;
-    using System.Text.Json.Serialization;
-    using System.Windows;
+    using MediaTrackerFinal.Singleton;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml.
@@ -34,26 +38,32 @@ namespace MediaTrackerFinal
              */
             this.InitializeComponent();
 
-            var test = MediaFactory.CreateMedia(4, "Wausau", "Evan", MediaTypes.Movie, "Youtube", 100, 1000);
+            //var test = MediaFactory.CreateMedia(4, "Wausau", "Evan", MediaTypes.Movie, "Youtube", 100, 1000);
 
-            this.medias.Add(test);
+            //this.medias.Add(test);
 
-            test = MediaFactory.CreateMedia(11, "Toy Story", "Disney", MediaTypes.Video, "Disney Plus", 500, 5550);
+            //test = MediaFactory.CreateMedia(11, "Toy Story", "Disney", MediaTypes.Video, "Disney Plus", 500, 5550);
 
-            this.medias.Add(test);
+            //this.medias.Add(test);
 
-            test = MediaFactory.CreateMedia(1, "Interstellar", "Christopher Nolan", MediaTypes.Video, "Netflix", 650, 5000);
+            //test = MediaFactory.CreateMedia(1, "Interstellar", "Christopher Nolan", MediaTypes.Video, "Netflix", 650, 5000);
 
-            this.medias.Add(test);
+            //this.medias.Add(test);
 
-            test = MediaFactory.CreateMedia(5, "Cars", "Disney", MediaTypes.Video, "Disney Plus", 650, 5000);
+            //test = MediaFactory.CreateMedia(5, "Cars", "Disney", MediaTypes.Video, "Disney Plus", 650, 5000);
 
-            this.medias.Add(test);
+            //this.medias.Add(test);
 
-            var testing = MakeMediaJSON.CreateMediaJson(this.medias);
-            MessageBox.Show(testing);
+            //test = MediaFactory.CreateMedia(10, "Overwatch Gameplay", "EvanGaming", MediaTypes.Video, "Youtube", 11, 1111);
+
+            //this.medias.Add(test);
+
+            var userMediaAccesser = new UserMediaAccessor();
+            this.medias = userMediaAccesser.Medias;
 
             this.MediaListBox.ItemsSource = this.medias;
+
+            Console.WriteLine("Hello!");
         }
 
         private void HightPriority_Click(object sender, RoutedEventArgs e)
@@ -70,17 +80,18 @@ namespace MediaTrackerFinal
 
         private void MostWatched_Click(object sender, RoutedEventArgs e)
         {
-            var windowTextChangeHandler = new InterfaceHandler(this, this.MediaListBox, this.PriorityText, this.MediaName, this.MediaCreator, this.MediaType, this.MediaSource, this.MediaConsumed);
+            var sortbyMostWatched = new SortByMostWatchedCommand(this.medias);
+            sortbyMostWatched.Execute();
         }
 
         private void LeastWatched_Click(object sender, RoutedEventArgs e)
         {
-            var windowTextChangeHandler = new InterfaceHandler(this, this.MediaListBox, this.PriorityText, this.MediaName, this.MediaCreator, this.MediaType, this.MediaSource, this.MediaConsumed);
+            var sortbyLeastWatched = new sortByLeastWatchedCommand(this.medias);
+            sortbyLeastWatched.Execute();
         }
 
         private void AddMedia_Click(object sender, RoutedEventArgs e)
         {
-            // Its okay for null here because I will enforce the user to provide proper fields.
             var addMediaWindow = new AddMediaWindow(this.medias);
 
             addMediaWindow.ShowDialog();

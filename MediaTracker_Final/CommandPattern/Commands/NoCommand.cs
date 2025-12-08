@@ -1,8 +1,5 @@
 ﻿// Copyright (c) evanvangNTCgit. All rights reserved.
 
-using MediaTrackerFinal.MediaObject;
-using System.Collections.ObjectModel;
-
 namespace MediaTrackerFinal.CommandPattern.Commands
 {
     /// <summary>

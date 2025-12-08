@@ -1,41 +1,47 @@
-{
-  "Media":
-  [
-    {
-      "PriorityNumber": 1,
-      "Media Name": "Interstellar",
-      "Media Creator": "Christopher Nolan",
-      "Media Type": "Video",
-      "Media Source": "Netflix",
-      "Media Consumed": "100",
-      "Media Length": "1000"
-    },
-    {
-      "PriorityNumber": 2,
-      "Media Name": "Cars",
-      "Media Creator": "Disney",
-      "Media Type": "Video",
-      "Media Source": "Disney Plus",
-      "Media Consumed": "500",
-      "Media Length": "4000"
-    },
-    {
-      "PriorityNumber": 3,
-      "Media Name": "Wall-E",
-      "Media Creator": "Disney",
-      "Media Type": "Video",
-      "Media Source": "Disney Plus",
-      "Media Consumed": "900",
-      "Media Length": "6000"
-    },
-    {
-      "PriorityNumber": 4,
-      "Media Name": "Toy Story 3",
-      "Media Creator": "Disney",
-      "Media Type": "Video",
-      "Media Source": "Disney Plus",
-      "Media Consumed": "500",
-      "Media Length": "4000"
-    }
-  ]
-}
+[
+  {
+    "PriorityNumber": 4,
+    "Name": "Wausau",
+    "Creator": "Evan",
+    "Source": "Youtube",
+    "MediaConsumed": 100,
+    "MediaLength": 1000,
+    "MediaType": 2
+  },
+  {
+    "PriorityNumber": 11,
+    "Name": "Toy Story",
+    "Creator": "Disney",
+    "Source": "Disney Plus",
+    "MediaConsumed": 500,
+    "MediaLength": 5550,
+    "MediaType": 0
+  },
+  {
+    "PriorityNumber": 1,
+    "Name": "Interstellar",
+    "Creator": "Christopher Nolan",
+    "Source": "Netflix",
+    "MediaConsumed": 650,
+    "MediaLength": 5000,
+    "MediaType": 0
+  },
+  {
+    "PriorityNumber": 5,
+    "Name": "Cars",
+    "Creator": "Disney",
+    "Source": "Disney Plus",
+    "MediaConsumed": 650,
+    "MediaLength": 5000,
+    "MediaType": 0
+  },
+  {
+    "PriorityNumber": 10,
+    "Name": "Overwatch Gameplay",
+    "Creator": "EvanGaming",
+    "Source": "Youtube",
+    "MediaConsumed": 11,
+    "MediaLength": 1111,
+    "MediaType": 0
+  }
+]

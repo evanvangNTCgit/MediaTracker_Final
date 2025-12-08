@@ -51,7 +51,7 @@ namespace MediaTrackerFinal.MediaObject
         }
 
         /// <summary>
-        /// Gets the priority number of media.
+        /// Gets or sets the priority number of media.
         /// </summary>
         public int PriorityNumber { get => this.priorityNumber; set => this.priorityNumber = value; }
 
@@ -91,6 +91,10 @@ namespace MediaTrackerFinal.MediaObject
         /// <returns>Percentage of media consumed.</returns>
         public abstract int GetMediaConsumedDisplay();
 
+        /// <summary>
+        /// Proper to string for media.
+        /// </summary>
+        /// <returns>Media to string.</returns>
         public override string ToString()
         {
             return $"{this.name}\n  By: {this.creator}";
