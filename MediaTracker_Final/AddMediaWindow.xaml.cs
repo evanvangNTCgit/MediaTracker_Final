@@ -120,9 +120,9 @@ namespace MediaTrackerFinal
             var source = this.sourceInputBox.Text;
 
             // Getting the length of the media...
-            var consumedHours = int.Parse(this.consumedHoursComboBox.SelectedValue.ToString());
-            var consumedMinutes = int.Parse(this.consumedMinutesComboBox.SelectedValue.ToString());
-            var consumedSeconds = int.Parse(this.consumedSecondsComboBox.SelectedValue.ToString());
+            var h = int.TryParse(this.consumedHoursComboBox.SelectedValue.ToString(), out int consumedHours);
+            var m = int.TryParse(this.consumedMinutesComboBox.SelectedValue.ToString(), out int consumedMinutes);
+            var s = int.TryParse(this.consumedSecondsComboBox.SelectedValue.ToString(), out int consumedSeconds);
 
             var consumedLength = GetMediaLength(consumedHours, consumedMinutes, consumedSeconds);
 
