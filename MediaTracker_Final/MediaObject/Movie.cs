@@ -2,7 +2,10 @@
 
 namespace MediaTrackerFinal.MediaObject
 {
-    class Movie : Media
+    /// <summary>
+    /// The movie media class.
+    /// </summary>
+    public class Movie : Media
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Movie"/> class.

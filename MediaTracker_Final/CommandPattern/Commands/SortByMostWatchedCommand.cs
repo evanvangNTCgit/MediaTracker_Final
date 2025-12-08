@@ -1,10 +1,13 @@
 ﻿// Copyright (c) evanvangNTCgit. All rights reserved.
 
-using MediaTrackerFinal.MediaObject;
-using System.Collections.ObjectModel;
-
 namespace MediaTrackerFinal.CommandPattern.Commands
 {
+    using System.Collections.ObjectModel;
+    using MediaTrackerFinal.MediaObject;
+
+    /// <summary>
+    /// A command that sorts list by most watched.
+    /// </summary>
     public class SortByMostWatchedCommand
     {
         private ObservableCollection<Media> medias;

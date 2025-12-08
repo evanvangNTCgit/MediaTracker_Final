@@ -1,6 +1,5 @@
 ﻿// Copyright (c) evanvangNTCgit. All rights reserved.
 
-
 namespace MediaTrackerFinal.Singleton
 {
     using System;
@@ -46,17 +45,17 @@ namespace MediaTrackerFinal.Singleton
             try
             {
                 var data = File.ReadAllText("../../../TestJSON/testMedia.json");
-                var dataArray = JsonArray.Parse(data)!.AsArray();
+                var dataArray = JsonArray.Parse(data) !.AsArray();
 
                 foreach (JsonNode media in dataArray!)
                 {
-                    int priorityNum = media!["PriorityNumber"]!.GetValue<int>();
-                    string title = media["Name"]!.GetValue<string>();
-                    string creator = media["Creator"]!.GetValue<string>();
-                    string source = media["Source"]!.GetValue<string>();
-                    int mediaConsumed = media["MediaConsumed"]!.GetValue<int>();
-                    int mediaDuration = media["MediaLength"]!.GetValue<int>();
-                    int mediaType = media["MediaType"]!.GetValue<int>();
+                    int priorityNum = media!["PriorityNumber"] !.GetValue<int>();
+                    string title = media["Name"] !.GetValue<string>();
+                    string creator = media["Creator"] !.GetValue<string>();
+                    string source = media["Source"] !.GetValue<string>();
+                    int mediaConsumed = media["MediaConsumed"] !.GetValue<int>();
+                    int mediaDuration = media["MediaLength"] !.GetValue<int>();
+                    int mediaType = media["MediaType"] !.GetValue<int>();
 
                     var mToAdd = MediaFactory.CreateMediaFromJsonObject(priorityNum, title, creator, mediaType, source, mediaConsumed, mediaDuration);
                     this.medias.Add(mToAdd);
@@ -77,17 +76,17 @@ namespace MediaTrackerFinal.Singleton
     ""MediaType"": 1
   }
 ]";
-                var dataArray = JsonArray.Parse(data)!.AsArray();
+                var dataArray = JsonArray.Parse(data) !.AsArray();
 
                 foreach (JsonNode media in dataArray!)
                 {
-                    int priorityNum = media!["PriorityNumber"]!.GetValue<int>();
-                    string title = media["Name"]!.GetValue<string>();
-                    string creator = media["Creator"]!.GetValue<string>();
-                    string source = media["Source"]!.GetValue<string>();
-                    int mediaConsumed = media["MediaConsumed"]!.GetValue<int>();
-                    int mediaDuration = media["MediaLength"]!.GetValue<int>();
-                    int mediaType = media["MediaType"]!.GetValue<int>();
+                    int priorityNum = media!["PriorityNumber"] !.GetValue<int>();
+                    string title = media["Name"] !.GetValue<string>();
+                    string creator = media["Creator"] !.GetValue<string>();
+                    string source = media["Source"] !.GetValue<string>();
+                    int mediaConsumed = media["MediaConsumed"] !.GetValue<int>();
+                    int mediaDuration = media["MediaLength"] !.GetValue<int>();
+                    int mediaType = media["MediaType"] !.GetValue<int>();
 
                     var mToAdd = MediaFactory.CreateMediaFromJsonObject(priorityNum, title, creator, mediaType, source, mediaConsumed, mediaDuration);
                     this.medias.Add(mToAdd);

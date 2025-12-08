@@ -62,7 +62,7 @@ namespace MediaTrackerFinal
 
         private void LeastWatched_Click(object sender, RoutedEventArgs e)
         {
-            var sortbyLeastWatched = new sortByLeastWatchedCommand(this.medias);
+            var sortbyLeastWatched = new SortByLeastWatchedCommand(this.medias);
             sortbyLeastWatched.Execute();
         }
 

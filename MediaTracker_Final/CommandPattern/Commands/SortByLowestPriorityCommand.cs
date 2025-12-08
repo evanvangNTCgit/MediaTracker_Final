@@ -5,10 +5,17 @@ namespace MediaTrackerFinal.CommandPattern.Commands
     using System.Collections.ObjectModel;
     using MediaTrackerFinal.MediaObject;
 
-    class SortByLowestPriorityCommand : ICommand
+    /// <summary>
+    /// A command to sort by lowest priority.
+    /// </summary>
+    public class SortByLowestPriorityCommand : ICommand
     {
         private ObservableCollection<Media> medias;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SortByLowestPriorityCommand"/> class.
+        /// </summary>
+        /// <param name="medias">media list being sorted.</param>
         public SortByLowestPriorityCommand(ObservableCollection<Media> medias)
         {
             this.medias = medias;

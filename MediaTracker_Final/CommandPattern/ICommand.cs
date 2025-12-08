@@ -1,10 +1,9 @@
 ﻿// Copyright (c) evanvangNTCgit. All rights reserved.
-
-using MediaTrackerFinal.MediaObject;
-using System.Collections.ObjectModel;
-
 namespace MediaTrackerFinal.CommandPattern
 {
+    using System.Collections.ObjectModel;
+    using MediaTrackerFinal.MediaObject;
+
     /// <summary>
     /// The interface for all commands to implement.
     /// </summary>

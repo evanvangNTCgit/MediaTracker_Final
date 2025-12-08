@@ -2,21 +2,21 @@
 
 namespace MediaTrackerFinal.CommandPattern.Commands
 {
-    using MediaTrackerFinal.MediaObject;
     using System.Collections.ObjectModel;
+    using MediaTrackerFinal.MediaObject;
 
     /// <summary>
     /// This command will sort a media list by the least watched.
     /// </summary>
-    public class sortByLeastWatchedCommand : ICommand
+    public class SortByLeastWatchedCommand : ICommand
     {
         private ObservableCollection<Media> medias;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="sortByLeastWatchedCommand"/> class.
+        /// Initializes a new instance of the <see cref="SortByLeastWatchedCommand"/> class.
         /// </summary>
         /// <param name="medias">Observable media collection to sort.</param>
-        public sortByLeastWatchedCommand(ObservableCollection<Media> medias)
+        public SortByLeastWatchedCommand(ObservableCollection<Media> medias)
         {
             this.medias = medias;
         }

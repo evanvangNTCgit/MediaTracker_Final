@@ -61,6 +61,11 @@ namespace MediaTrackerFinal
         }
 
         /// <summary>
+        /// Gets the media getting added from the add media window.
+        /// </summary>
+        public Media MediaGettingAdded { get => this.mediaGettingAdded; }
+
+        /// <summary>
         /// Converts the hours, minutes, and seconds input into one big second value.
         /// </summary>
         /// <param name="hours">The hours length of media.</param>
@@ -88,11 +93,6 @@ namespace MediaTrackerFinal
 
             return mediaLengthInSeconds;
         }
-
-        /// <summary>
-        /// Gets the media getting added from the add media window.
-        /// </summary>
-        public Media MediaGettingAdded { get => this.mediaGettingAdded; }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {

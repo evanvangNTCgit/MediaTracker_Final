@@ -7,7 +7,7 @@ namespace MediaTrackerFinal
     using MediaTrackerFinal.MediaObject;
 
     /// <summary>
-    /// Interaction logic for EditMediaConsumedWindow.xaml
+    /// Interaction logic for EditMediaConsumedWindow.xaml.
     /// </summary>
     public partial class EditMediaConsumedWindow : Window
     {
@@ -33,7 +33,7 @@ namespace MediaTrackerFinal
                 this.hoursComboBox.Items.Add(i.ToString());
             }
 
-            for(int i = 0; i <= 60; i++)
+            for (int i = 0; i <= 60; i++)
             {
                 this.minutesComboBox.Items.Add(i.ToString());
                 this.secondsComboBox.Items.Add(i.ToString());
@@ -42,14 +42,14 @@ namespace MediaTrackerFinal
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            int.TryParse(this.hoursComboBox.SelectedValue?.ToString(), out int hoursInput);
-            int.TryParse(this.minutesComboBox.SelectedValue?.ToString(), out int minutesInput);
-            int.TryParse(this.secondsComboBox.SelectedValue?.ToString(), out int secondsInput);
+            bool h = int.TryParse(this.hoursComboBox.SelectedValue?.ToString(), out int hoursInput);
+            bool m = int.TryParse(this.minutesComboBox.SelectedValue?.ToString(), out int minutesInput);
+            bool s = int.TryParse(this.secondsComboBox.SelectedValue?.ToString(), out int secondsInput);
 
             hoursInput = hoursInput * 3600;
             minutesInput = minutesInput * 60;
 
-            if ((hoursInput + minutesInput + secondsInput) > this.mediaGettingEdited.MediaLength) 
+            if ((hoursInput + minutesInput + secondsInput) > this.mediaGettingEdited.MediaLength)
             {
                 MessageBox.Show("You input a time longer than the video length please try again.");
                 return;

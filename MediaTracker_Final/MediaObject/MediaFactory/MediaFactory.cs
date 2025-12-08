@@ -1,9 +1,9 @@
 ﻿// Copyright (c) evanvangNTCgit. All rights reserved.
 
-using System.Data;
-
 namespace MediaTrackerFinal.MediaObject.MediaFactory
 {
+    using System.Data;
+
     /// <summary>
     /// This is my factory OOD implementation.
     /// Here will be where I create media.
@@ -58,7 +58,7 @@ namespace MediaTrackerFinal.MediaObject.MediaFactory
         /// <param name="mediaConsumed">Amount of media Consumed.</param>
         /// <param name="mediaLength">Length of the media.</param>
         /// <returns>The newly created User Media.</returns>
-        public static Media CreateMediaFromJsonObject(int priorityNumber, string name, string creator, int mediaType, string source, int mediaConsumed, int mediaLength) 
+        public static Media CreateMediaFromJsonObject(int priorityNumber, string name, string creator, int mediaType, string source, int mediaConsumed, int mediaLength)
         {
             Media mediaInstantiated = null!;
             switch (mediaType)
