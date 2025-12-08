@@ -4,6 +4,7 @@ namespace MediaTrackerFinal
 {
     using MediaTrackerFinal.CommandPattern.Commands;
     using MediaTrackerFinal.InterfaceHandling;
+    using MediaTrackerFinal.JsonObjectHandling;
     using MediaTrackerFinal.MediaObject;
     using MediaTrackerFinal.MediaObject.MediaFactory;
     using System.Collections.ObjectModel;
@@ -48,6 +49,9 @@ namespace MediaTrackerFinal
             test = MediaFactory.CreateMedia(5, "Cars", "Disney", MediaTypes.Video, "Disney Plus", 650, 5000);
 
             this.medias.Add(test);
+
+            var testing = MakeMediaJSON.CreateMediaJson(this.medias);
+            MessageBox.Show(testing);
 
             this.MediaListBox.ItemsSource = this.medias;
         }
