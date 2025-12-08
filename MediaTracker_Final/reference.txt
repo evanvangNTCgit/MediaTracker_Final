@@ -1,0 +1,11 @@
+﻿//// Source - https://stackoverflow.com/a
+//// Posted by Serge, modified by community. See post 'Timeline' for change history
+//// Retrieved 2025-12-07, License - CC BY-SA 4.0
+
+var testing = JsonSerializer.Serialize(this.medias);
+string formattedJson = System.Text.Json.JsonSerializer
+.Serialize(JsonDocument.Parse(testing),
+new JsonSerializerOptions() { WriteIndented = true });
+MessageBox.Show(formattedJson);
+
+HOW TO FORMAT JSON WITH INDENTATION ^^

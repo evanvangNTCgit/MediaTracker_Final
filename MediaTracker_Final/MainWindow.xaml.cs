@@ -2,11 +2,14 @@
 
 namespace MediaTrackerFinal
 {
-    using System.Collections.ObjectModel;
-    using System.Windows;
+    using MediaTrackerFinal.CommandPattern.Commands;
     using MediaTrackerFinal.InterfaceHandling;
     using MediaTrackerFinal.MediaObject;
     using MediaTrackerFinal.MediaObject.MediaFactory;
+    using System.Collections.ObjectModel;
+    using System.Text.Json;
+    using System.Text.Json.Serialization;
+    using System.Windows;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml.
@@ -30,15 +33,19 @@ namespace MediaTrackerFinal
              */
             this.InitializeComponent();
 
-            var test = MediaFactory.CreateMedia(1, "Wausau", "Evan", MediaTypes.Movie, "Youtube", 100, 1000);
+            var test = MediaFactory.CreateMedia(4, "Wausau", "Evan", MediaTypes.Movie, "Youtube", 100, 1000);
 
             this.medias.Add(test);
 
-            test = MediaFactory.CreateMedia(2, "Toy Story", "Disney", MediaTypes.Video, "Disney Plus", 500, 5550);
+            test = MediaFactory.CreateMedia(11, "Toy Story", "Disney", MediaTypes.Video, "Disney Plus", 500, 5550);
 
             this.medias.Add(test);
 
-            test = MediaFactory.CreateMedia(3, "Interstellar", "Christopher Nolan", MediaTypes.Video, "Netflix", 650, 5000);
+            test = MediaFactory.CreateMedia(1, "Interstellar", "Christopher Nolan", MediaTypes.Video, "Netflix", 650, 5000);
+
+            this.medias.Add(test);
+
+            test = MediaFactory.CreateMedia(5, "Cars", "Disney", MediaTypes.Video, "Disney Plus", 650, 5000);
 
             this.medias.Add(test);
 
@@ -47,12 +54,14 @@ namespace MediaTrackerFinal
 
         private void HightPriority_Click(object sender, RoutedEventArgs e)
         {
-            var windowTextChangeHandler = new InterfaceHandler(this, this.MediaListBox, this.PriorityText, this.MediaName, this.MediaCreator, this.MediaType, this.MediaSource, this.MediaConsumed);
+            var highPriorityCommand = new SortByHighestPriorityCommand(this.medias);
+            highPriorityCommand.Execute();
         }
 
         private void LeastPriority_Click(object sender, RoutedEventArgs e)
         {
-            var windowTextChangeHandler = new InterfaceHandler(this, this.MediaListBox, this.PriorityText, this.MediaName, this.MediaCreator, this.MediaType, this.MediaSource, this.MediaConsumed);
+            var lowPriorityCommand = new SortByLowestPriorityCommand(this.medias);
+            lowPriorityCommand.Execute();
         }
 
         private void MostWatched_Click(object sender, RoutedEventArgs e)
@@ -77,7 +86,10 @@ namespace MediaTrackerFinal
 
         private void RemoveMedia_Click(object sender, RoutedEventArgs e)
         {
-            var windowTextChangeHandler = new InterfaceHandler(this, this.MediaListBox, this.PriorityText, this.MediaName, this.MediaCreator, this.MediaType, this.MediaSource, this.MediaConsumed);
+            Media mediaSelected = (Media)this.MediaListBox.SelectedItem;
+            this.medias.Remove(mediaSelected);
+
+            this.MediaListBox.SelectedIndex += 1;
         }
 
         private void EditMedia_Click(object sender, RoutedEventArgs e)
@@ -91,12 +103,15 @@ namespace MediaTrackerFinal
 
             Media mediaSelected = (Media)this.MediaListBox.SelectedItem;
 
-            windowTextChangeHandler.ChangePriorityNumber(mediaSelected.PriorityNumber);
-            windowTextChangeHandler.ChangeMediaName(mediaSelected.Name);
-            windowTextChangeHandler.ChangeMediaCreator(mediaSelected.Creator);
-            windowTextChangeHandler.ChangeMediaSource(mediaSelected.Source);
-            windowTextChangeHandler.ChangeMediaType(mediaSelected.MediaType.ToString());
-            windowTextChangeHandler.ChangeMediaConsumed($"%{mediaSelected.GetMediaConsumedDisplay().ToString()} Consumed");
+            if (mediaSelected != null)
+            {
+                windowTextChangeHandler.ChangePriorityNumber(mediaSelected.PriorityNumber);
+                windowTextChangeHandler.ChangeMediaName(mediaSelected.Name);
+                windowTextChangeHandler.ChangeMediaCreator(mediaSelected.Creator);
+                windowTextChangeHandler.ChangeMediaSource(mediaSelected.Source);
+                windowTextChangeHandler.ChangeMediaType(mediaSelected.MediaType.ToString());
+                windowTextChangeHandler.ChangeMediaConsumed($"{mediaSelected.GetMediaConsumedDisplay().ToString()}% Consumed");
+            }
         }
     }
 }
