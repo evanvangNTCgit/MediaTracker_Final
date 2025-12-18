@@ -27,6 +27,6 @@ A WPF application demonstrating three of the design patterns while at school in 
 1. **Clone the repository** and open the solution in Visual Studio 2022.
 2. **Build the solution** to restore dependencies.
 3. **Run the application.**
-4. On startup, the garage is populated with sample vehicles.
+4. On startup, the media list should be populated with movies and videos already.
 5. Select a media from the media list to view its details.
 6. Use the "Add" button to create and add a new media.
